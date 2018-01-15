@@ -15,7 +15,7 @@ test('I know that yield* delegates the yielding to another function', () => {
 
   function* sagaB() {
     yield 'banana';
-    // FIX
+    yield* sagaA(['apple', 'kiwi', 'pineapple']);
     yield 'mango';
   }
 
